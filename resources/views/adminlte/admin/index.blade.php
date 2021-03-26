@@ -49,8 +49,8 @@
                         <td>{{ $user->name }}</a></td>
                         <td>{{ $user->email }}</td> 
                         <td>
-                            <a href="#" class="btn btn-warning btn-sm">Edit</a> 
-                            <a class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus ini?')" href="#">Delete</a> 
+                            <a href="{{ route('admin.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a> 
+                            <a class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus ini?')" href="{{ route('admin.delete', $user->id) }}">Delete</a> 
                         </td>
                     </tr>
                 @endforeach

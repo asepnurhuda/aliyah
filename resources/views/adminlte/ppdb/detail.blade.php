@@ -3,19 +3,26 @@
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
-      <div class="container-fluid">
+        <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Profile</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">PPDB Profil peserta</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
+            <div class="col-md-12">
+                @if(session('sukses'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('sukses') }}
+                    </div>
+                @endif
+            </div>
+            <div class="col-sm-6">
+                <h1>Profile</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">PPDB Profil peserta</li>
+                </ol>
+            </div>
+            </div>
+        </div><!-- /.container-fluid -->
     </section>
 
     <!-- Main content -->
@@ -43,6 +50,7 @@
 
                 <p class="text-muted text-center">Peserta PPDB</p>
                 <a href="{{ route('ppdb.exportpdf', $student->id) }}" class="btn btn-success btn-block"><b>Cetak ke pdf</b></a>
+                <a href="{{ route('ppdb.resetpassword', $student->user_id) }}" class="btn btn-danger btn-block"><b>Reset Password</b></a>
                 
                 </div>
                 <!-- /.card-body -->  

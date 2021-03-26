@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>PPDB MA Miftahul Ulum</title>
+<title>PPDB MAS Miftahul Ulum</title>
 </head>
 <style type="text/css">
 /* Kode CSS Untuk PAGE ini dibuat oleh http://jsfiddle.net/2wk6Q/1/ */
@@ -24,95 +24,99 @@
         box-shadow: 0;
         }
     }
-    table{
-        border-top: 1px solid black;
-        border-collapse: collapse;
-    }
-    .atas {
-        border-top: 0px;
-        border-bottom: 2px solid;
-        padding-top: 1px;
-        padding-bottom: 1px;
-    }
-    .header {
-        text-align: center;
-        font-size: 20px;
-    }
-    th {
-    padding: 5px;
-    text-align: left;  
-    width: 180px;  
+
+    .header-logo {
+        width: 78px;
+        height: 78px;
+        float: left;
     }
 
-    .untukphoto{
-        width: 160px;
+    .header{
+        
+        width: 19cm;
+        height: 2.1cm;
+        text-align: center;
+        font-size: 20px;
+        font-family: "Times New Roman";
+        border-bottom: 3px solid;
     }
     
-    .titikdua {
-        width: 10px;
+    div.clear {
+        clear:both;
     }
-    img.logo {
-        position:absolute; 
-        height: 50px;
-        width: 50px;
-        text-align: center;
-        vertical-align:middle;
-        z-index: 9999;
-        
+    
+    .formulir{
+        float: left;
+        width: 14cm;
+        padding: 10px 10px 30px 30px;
     }
-    img.photo {
-        position:absolute; 
-        width: 160px;
-        height:190px;
-        text-align: center;
-        vertical-align:middle;
-        z-index: 9999;
+
+    .photo{
+        padding-top: 20px;
+        padding-right: 10px;
+        width: 4cm;
+        height: 6cm;
     }
+
+    .footer{
+        height: 40px;
+        padding-left: 10px;
+        border-top: 2px solid;
+    }
+
+   
+
+
 </style>
 <body>
 
-<div class="page">
-    <table class="atas" style="width:100%">
-        <tr>
-            <td width="100px"><img class="logo" src="{{ url('images/default.jpg') }}" /></td>
-            <td class="header">FORMULIR PENDAFTARAN PESERTA DIDIK BARU <br>MADRASAH ALIYAH MIFTAHUL ULUM ANGGANA <br>TAHUN 2021</td>
-        </tr>
-    </table>
-    <table style="width:100%">
-        <tr>
-            <th>No Pendaftaran</th>
-            <td class="titikdua">:</td>
-            <td>{{ $student->no_pendaftaran }}</td>
-            <td class="untukphoto" rowspan="6"><img class="photo" src="{{ url('images/'.$student->photo) }}"></td>
-        </tr>
-        <tr>
-            <th>Nama Lengkap</th>
-            <td class="titikdua">:</td>
-            <td>{{ $student->nama_lengkap() }}</td>
-        </tr>
-        <tr>
-            <th>Jenis Kelamin</th>
-            <td class="titikdua">:</td>
-            <td>{{ $student->gender() }}</td>
-        </tr>
-        <tr>
-            <th>Tempat Lahir</th>
-            <td class="titikdua">:</td>
-            <td>{{ $student->tempat_lahir }}</td>
-        </tr>
-        <tr>
-            <th>Tanggal Lahir</th>
-            <td>:</td>
-            <td>{{ $student->tanggal_lahir }}</td>
-        </tr>
-        <tr>
-            <th>Alamat</th>
-            <td class="titikdua">:</td>
-            <td>{{ $student->alamat }}</td>
-        </tr>
-    </table>
-
-                        
-</div>    
+    <div class="page">
+        <div class="header-logo"><img src="{{ asset('images/logo-aliyah.png') }}" width="78" height="78"></div>
+        <div class="header"><b>KARTU PENDAFTARAN PESERTA DIDIK BARU (PPDB) <br> MADRASAH ALIYAH MIFTAHUL ULUM ANGGANA <br> TAHUN PEMBELAJARAN 2021/2022</b></div>    
+        <div class="clear"></div>
+        <div class="formulir">
+        <table>
+            <tr>
+                <td>No Pendaftaran</td>
+                <td class="titikdua">:</td>
+                <td>{{ $student->no_pendaftaran }}</td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td class="titikdua">:</td>
+                <td>{{ $student->nama_lengkap() }}</td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td class="titikdua">:</td>
+                <td>{{ $student->gender() }}</td>
+            </tr>
+            <tr>
+                <td>Tempat Lahir</td>
+                <td class="titikdua">:</td>
+                <td>{{ $student->tempat_lahir }}</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>:</td>
+                <td>{{ $student->tanggal_lahir }}</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td class="titikdua">:</td>
+                <td >{{ $student->alamat}}</td>
+            </tr>
+            
+        </table>
+        </div>
+        <div class="photo">
+            <img src="{{ asset('images/'.$student->photo) }}" width="148" height="200">
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+            <b>Catatan:</b> <br>
+            <i>Calon siswa yang telah mendaftar harus mengikuti tes masuk, cek pelaksanaan (waktu tes) diwebsite pada menu Agenda Sekolah.</i>
+        </div>                   
+    </div>    
 </body>
 </html>

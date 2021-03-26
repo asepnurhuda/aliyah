@@ -35,7 +35,7 @@ class SiteController extends Controller
     public function create(Request $request)
     {
         //bikin nomor pendaftaran
-        $awal = 'MA-MU';
+        $awal = 'MAS-MU';
         $bulanRomawi = array("", "I","II","III", "IV", "V","VI","VII","VIII","IX","X", "XI","XII");
         $noPendaftarAkhir = last(explode('/',Student::max('no_pendaftaran')));
         $no = 1;

@@ -93,9 +93,13 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function(){
     Route::get('/ppdb/lengkapidata', 'PpdbController@lengkapidata')->name('ppdb.lengkapidata');
     Route::get('/ppdb/persertaditerima', 'PpdbController@pesertaditerima')->name('ppdb.pesertaditerima');
     Route::get('/ppdb/persertaditolak', 'PpdbController@pesertaditolak')->name('ppdb.pesertaditolak');
+    Route::get('/ppdb/resetpassword/{id}', 'PpdbController@resetpassword')->name('ppdb.resetpassword');
 
     Route::get('/admin', 'UserController@index')->name('admin.index'); 
     Route::post('/admin-create', 'UserController@create')->name('admin.create');
+    Route::get('/admin/{id}/delete', 'UserController@delete')->name('admin.delete');
+    Route::get('/admin/{id}/edit', 'UserController@edit')->name('admin.edit');
+    Route::post('/admin/{id}/update', 'UserController@update')->name('admin.update');
 });
 
 Route::group(['middleware' => ['auth', 'checkRole:admin,siswa,pendaftar']], function(){

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Student;
 use PDF;
 use Carbon\Carbon;
+use App\User;
 
 class PpdbController extends Controller
 {
@@ -123,4 +124,12 @@ class PpdbController extends Controller
         }
     }
 
+    public function resetpassword($id)
+    {
+        $user = User::findOrFail($id);
+        $user->update([
+            'password' => bcrypt('12345')
+        ]);
+        return redirect()->back()->with('sukses', 'Berhasil reset password');
+    }
 }

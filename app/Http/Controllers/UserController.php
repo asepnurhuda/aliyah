@@ -35,4 +35,48 @@ class UserController extends Controller
         return redirect()->route('admin.index');
 
     }
+
+    public function delete($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+        return back();
+    }
+
+    public function edit($id)
+    {
+        $admin = User::findOrFail($id);
+        return view('adminlte.admin.edit', compact('admin'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
+
+        $admin = User::findOrFail($id);
+        $adminOldPassword = $admin->password;
+
+        if( !$request->password ){
+            $admin->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => $adminOldPassword,
+                ]);
+            
+                return redirect()->route('admin.index');
+            }
+
+        if($request->password != $request->password2 ){
+            return redirect()->back()->with('gagal', 'Password tidak sama');
+        }
+        $admin->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            ]);
+        return redirect()->route('admin.index');
+    }
 }
