@@ -212,7 +212,7 @@
         </div>
         <div class="clear"></div>
         <div class="footer">
-            Diterima di Madrasah Aliyah Miftahul Ulum pada tanggal : {{ date('d M Y') }}
+            Diterima di Madrasah Aliyah Miftahul Ulum pada tanggal : {{ config('sekolah.tanggal_diterima') }}
         </div>   
         <div class="kepala">
             Kepala Madrasah  

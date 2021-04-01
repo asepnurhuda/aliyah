@@ -12,4 +12,5 @@ return [
     'ketemu_guru' => 'Kami memiliki pengajar dengan berbagai bidang keilmuan dan keahlian sesuai dengan kebutuhan pengajaran, disertai dengan sertifikat pendidik agar pelaksanaan pengajaran menjadi profesional dan terstruktur dengan baik.',
     'slogan' => 'Sekolah dan Belajar Agama Islam',
     'youtube' => 'https://www.youtube.com/watch?v=3db6Wx7BXLc',
+    'tanggal_diterima' => "08 Juli 2021"
 ];
