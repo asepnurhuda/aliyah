@@ -5,7 +5,7 @@ return [
     'email_sekolah' => 'madrasahaliyahanggana@yahoo.com',
     'jam_kerja' => 'Senin - Sabtu Pukul 07.00 - 16.00 WITA',
     'telp_sekolah' => '0541 6754957',
-    'web_sekolah' => 'https://aliyahmu.sch.id',
+    'web_sekolah' => 'http://aliyahmu.sch.id',
     'motto' => 'Madrasah Hebat',
     'daftar_sekarang' => 'Ayo segera bergabung bersama kami di Madrasah Aliyah Miftahul Ulum Anggana.',
     'lengkapi_persyaratan' => 'Segera lengkapi data diri Anda, jangan sampai ada yang terlewatkan.',

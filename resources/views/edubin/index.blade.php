@@ -256,7 +256,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-last order-lg-first">
                     <div class="video text-lg-left text-center pt-50">
-                        <a class="Video-popup" href="{{ config('youtube') }}"><i class="fa fa-play"></i></a>
+                        <a class="Video-popup" href="{{ config('sekolah.youtube') }}"><i class="fa fa-play"></i></a>
                     </div> <!-- row -->
                 </div>
                 <div class="col-lg-5 offset-lg-1 order-first order-lg-last">
