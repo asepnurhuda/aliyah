@@ -12,7 +12,7 @@
     <title>MA - Miftahul Ulum Anggana</title>
     
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('edubin/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('edubin/images/faviconma.png') }}" type="image/png">
 
     <!--====== Slick css ======-->
     <link rel="stylesheet" href="{{ asset('edubin/css/slick.css') }}">
