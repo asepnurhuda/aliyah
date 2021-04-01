@@ -216,7 +216,7 @@
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
                         <h5>Staff Pengajar</h5>
-                        <h2>Temui Guru Kami</h2>
+                        <h2>Kenali Lebih Dekat</h2>
                     </div> <!-- section title -->
                     <div class="teachers-cont">
                         <p>{{ config('sekolah.ketemu_guru') }}</p>
@@ -256,7 +256,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 order-last order-lg-first">
                     <div class="video text-lg-left text-center pt-50">
-                        <a class="Video-popup" href="https://www.youtube.com/watch?v=bRRtdzJH1oE"><i class="fa fa-play"></i></a>
+                        <a class="Video-popup" href="{{ config('youtube') }}"><i class="fa fa-play"></i></a>
                     </div> <!-- row -->
                 </div>
                 <div class="col-lg-5 offset-lg-1 order-first order-lg-last">
