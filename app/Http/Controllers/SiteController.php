@@ -93,9 +93,10 @@ class SiteController extends Controller
 
     public function singlePost($slug)
     {
+        $posts = Post::paginate(3);
         $post = Post::where('slug','=',$slug)->first();
         $categories = Category::all();
-        return view('edubin.posts.singlepost', compact('post', 'categories'));
+        return view('edubin.posts.singlepost', compact('post', 'posts', 'categories'));
     }
 
     public function allTeachers()

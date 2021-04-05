@@ -50,47 +50,23 @@
                         </div> <!-- categories -->
                         <div class="col-lg-12 col-md-6">
                             <div class="saidbar-post mt-30">
-                                <h4>Popular Posts</h4>
+                                <h4>Berita Terkini</h4>
                                 <ul>
+                                @foreach($posts as $post)
                                     <li>
                                         <a href="#">
                                             <div class="singel-post">
                                                 <div class="thum">
-                                                    <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
+                                                    <img src="{{ $post->thumbnail() }}" alt="Blog">
                                                 </div>
                                                 <div class="cont">
-                                                    <h6>Introduction to languages</h6>
-                                                    <span>20 Dec 2018</span>
+                                                    <h6>{{ $post->title }}</h6>
+                                                    <span>{{ $post->created_at->format('d M Y') }}</span>
                                                 </div>
                                             </div> <!-- singel post -->
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="singel-post">
-                                                <div class="thum">
-                                                    <img src="images/blog/blog-post/bp-2.jpg" alt="Blog">
-                                                </div>
-                                                <div class="cont">
-                                                    <h6>How to build a game with java</h6>
-                                                    <span>10 Dec 2018</span>
-                                                </div>
-                                            </div> <!-- singel post -->
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="singel-post">
-                                                <div class="thum">
-                                                    <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
-                                                </div>
-                                                <div class="cont">
-                                                    <h6>Basic accounting from primary</h6>
-                                                    <span>07 Dec 2018</span>
-                                                </div>
-                                            </div> <!-- singel post -->
-                                        </a>
-                                    </li>
+                                @endforeach   
                                 </ul>
                             </div> <!-- saidbar post -->
                         </div>
